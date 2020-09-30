@@ -4,6 +4,12 @@
 
 body {
   margin: 0;
+  margin-top: 40px;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
@@ -21,27 +27,51 @@ button {
   transition: 0.25s linear;
 }
 
+hr {
+  border: 1px solid black;
+}
+
 .main {
   width: 100%;
   height: 700px;
   margin: auto;
-  background-color: rgba(54, 52, 146, 0.274);
+  background-color: rgb(54, 52, 146);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+.topBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 100%;
+  text-align: right;
+  background-color: rgb(82, 82, 189);
+}
+
+.topButton {
+  width: 160px;
+  margin-right: 40px;
+  margin-top: 4px;
+  background-color: rgba(54, 52, 146, 0.274);
+}
+
 .title {
   width: 100%;
-  height: 500px;
-  background: url(imageplaceholder.jpg) no-repeat fixed;
-  background-size: 100%;
+  height: 400px;
+  background: url(imageplaceholder.jpg) no-repeat center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
 
 .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 60%;
   margin: 120px 0px;
   padding: 12px 100px;
@@ -50,6 +80,7 @@ button {
 
 .content {
   width: 100%;
+  background-color: rgb(56, 87, 143);
 }
 
 .bar {
@@ -59,14 +90,12 @@ button {
 
 .costumes {
   display: block;
-  background-color: rgb(56, 87, 143);
-  height: 390px;
+  min-height: 389px;
 }
 
 .makeup {
   display: none;
-  background-color: rgb(56, 87, 143);;
-  height: 390px;
+  min-height: 389px;
 }
 
 #costumeButt {
@@ -75,4 +104,27 @@ button {
 
 #makeupButt {
   background-color: darkBlue;
+}
+
+.category {
+  border: 6px solid rgb(197, 63, 39);
+  border-radius: 25px;
+  background-color: tomato;
+  width: 400px;
+  margin: 20px;
+  user-select: none;
+}
+
+.subcategory {
+  border: 6px solid rgb(197, 63, 39);
+  border-radius: 25px;
+  background-color: tomato;
+  width: 300px;
+  margin: 20px;
+  margin-left: 240px;
+  transition: 0.5s linear;
+}
+
+.subcategoryContainer {
+  display: none;
 }

@@ -1,7 +1,7 @@
 // Javascript
 "use strict";
 
-document.getElementById("buttonBar").addEventListener("click", handleClick);
+document.getElementById("content").addEventListener("click", handleClick);
 document.addEventListener("click", clickfunc);
 
 function handleClick(event) {
@@ -17,7 +17,24 @@ function handleClick(event) {
       document.getElementById("costumeDiv").style.display = "block";
       document.getElementById("costumeButt").style.backgroundColor = "darkSlateBlue";
     }
+  } else if(event.target.nodeName === "DIV") {
+    if(event.target.classList.contains("category")) { //check and open/close first level of categories
+      if(document.getElementById("subcategory" + event.target.dataset.group).style.display == "block") {
+        document.getElementById("subcategory" + event.target.dataset.group).style.display = "none";
+      } else {
+        document.getElementById("subcategory" + event.target.dataset.group).style.display = "block";
+      }
+    } 
+  } else if(event.target.nodeName === "P") { //check and open/close first level of categories but if user clicks paragraph el
+    if(event.target.parentElement.classList.contains("category")) {
+      if(document.getElementById("subcategory" + event.target.parentElement.dataset.group).style.display == "block") {
+        document.getElementById("subcategory" + event.target.parentElement.dataset.group).style.display = "none";
+      } else {
+        document.getElementById("subcategory" + event.target.parentElement.dataset.group).style.display = "block";
+      }
+    }
   }
+  
 }
 
 function clickfunc(event) {

@@ -7,7 +7,14 @@
   <title>Theatre Database</title>
 </head>
 <body>
+  
+  <div class="topBar">
+    <button class="topButton">Enter New Item</button>
+  </div>
+  
   <div class="main">
+    
+
     <div class="title">
       <!--Title box to show off website-->
       <div class="titleBox">
@@ -17,7 +24,7 @@
       
     </div>
 
-    <div class="content">
+    <div class="content" id="content">
       <div class="bar" id="buttonBar">
         <!--Small bar to choose from different Branches of Theatre-->
         <button type="button" id="costumeButt">Costumes</button>
@@ -26,11 +33,122 @@
 
       <div class="costumes" id="costumeDiv">
         <!--Costumes Div-->
-        <div>example box (costumes)</div>
+        <div class="category" data-group="c1">
+          <p>Category 1</p>
+        </div>
+
+        <div class="subcategoryContainer" id="subcategoryc1">
+          <div class="subcategory">
+            <p>subcategory 1</p>
+          </div>
+          <div class="subcategory">
+            <p>subcategory 2</p>
+          </div>
+          <div class="subcategory">
+            <p>subcategory 3</p>
+          </div>
+          <div class="subcategory">
+            <p>subcategory 4</p>
+          </div>
+          <div class="subcategory">
+            <p>subcategory 5</p>
+          </div>
+          <div class="subcategory">
+            <p>subcategory 6</p>
+          </div>
+        </div>
+
+        <div class="category" data-group="c2">
+          <p>
+            Category 2
+          </p>
+        </div>
+        
+        <div class="subcategoryContainer" id="subcategoryc2">
+          <div class="subcategory">
+            <p>
+              subcategory 1
+            </p>
+          </div>
+          <div class="subcategory">
+            <p>
+              subcategory 2
+            </p>
+          </div>
+          <div class="subcategory">
+            <p>
+              subcategory 3
+            </p>
+          </div>
+        </div>
+        
+
+        
+        <div class="category" data-group="c3">
+          <p>
+            Category 3
+          </p>
+        </div>
+
+        <div class="subcategoryContainer" id="subcategoryc3">
+          <div class="subcategory">
+            <p>
+              subcategory 1
+            </p>
+          </div>
+          <div class="subcategory">
+            <p>
+              subcategory 2
+            </p>
+          </div>
+          <div class="subcategory">
+            <p>
+              subcategory 3
+            </p>
+          </div>
+          <div class="subcategory">
+            <p>
+              subcategory 4
+            </p>
+          </div>
+        </div>
+
+        <div class="category" data-group="c4">
+          <p>
+            Category 4
+          </p>
+        </div>
+        
+        <div class="subcategoryContainer" id="subcategoryc4">
+          <div class="subcategory">
+            <p>
+              subcategory 1
+            </p>
+          </div>
+          <div class="subcategory">
+            
+            <p>
+              subcategory 2
+            </p>
+          </div>
+        </div>
+        
+      
       </div>
+
       <div class="makeup" id="makeupDiv">
-        <div>example box (makeup)</div>
         <!--Makeup Div-->
+        <div class="category" data-group="m1">
+          <p>Category 1</p>
+        </div>
+        
+        <div class="subcategoryContainer" id="subcategorym1">
+          <div class="subcategory">
+            <p>subcategory 1</p>
+          </div>
+        </div>
+
+        
       </div>
 
     </div>
