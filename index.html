@@ -9,26 +9,23 @@
 <body>
   
   <div class="topBar">
-    <button class="topButton">Enter New Item</button>
+    <button class="topButton barButton" id="submitButt">Enter New Item</button>
   </div>
   
   <div class="main">
-    
-
     <div class="title">
       <!--Title box to show off website-->
       <div class="titleBox">
         <h1>Theatre Database</h1>
         <p>Database containing files for Costumes and Makeup (and possibly more?)</p>
       </div>
-      
     </div>
 
     <div class="content" id="content">
       <div class="bar" id="buttonBar">
         <!--Small bar to choose from different Branches of Theatre-->
-        <button type="button" id="costumeButt">Costumes</button>
-        <button type="button" id="makeupButt">Makeup</button>
+        <button type="button" id="costumeButt" class="barButton">Costumes</button>
+        <button type="button" id="makeupButt" class="barButton">Makeup</button>
       </div>
 
       <div class="costumes" id="costumeDiv">
@@ -38,7 +35,7 @@
         </div>
 
         <div class="subcategoryContainer" id="subcategoryc1">
-          <div class="subcategory">
+          <div class="subcategory" id="subcategoryc11">
             <p>subcategory 1</p>
           </div>
           <div class="subcategory">
@@ -153,9 +150,36 @@
 
     </div>
   </div>
+
+  <div class="submit">
+    <div class="submitBox">
+      <h2>Submit New Item</h2>
+
+      <p style="margin: 60px 0px;">
+        Image: <button type="button">Select Image</button>
+      </p>
+      <p>Name: <input type="text" id="nameInp"></p>
+      <p>Description: <input type="text" id="descInp"></p>
+      <p>big category: 
+        <select id="bigCat">
+          <option value="0"></option>
+          <option value="1">category 1</option>
+          <option value="2">category 2</option>
+        </select>
+      </p>
+      <p>SMALL CATEGORY:
+        <select id="smallCat">
+          <option value="0"></option>
+          <option value="1">subcategory 1</option>
+          <option value="2">subcategory 2</option>
+        </select>
+      </p>
+      <p style="margin: 40px 0px;" id="submitButton"><button type="button">Submit</button></p>
+    </div>
+  </div>
   
   
-  
+  <script src="mainMenu.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

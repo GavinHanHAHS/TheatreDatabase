@@ -18,7 +18,7 @@ h1 {
   -webkit-text-fill-color: rgb(70, 100, 236);
 }
 
-button {
+button.barButton {
   border: none;
   color: white;
   width: 320px;
@@ -31,6 +31,7 @@ hr {
   border: 1px solid black;
 }
 
+/* main page base styling */
 .main {
   width: 100%;
   height: 700px;
@@ -42,6 +43,8 @@ hr {
   text-align: center;
 }
 
+
+/* nav bar */
 .topBar {
   position: fixed;
   top: 0;
@@ -53,12 +56,13 @@ hr {
 }
 
 .topButton {
-  width: 160px;
+  width: 200px;
   margin-right: 40px;
   margin-top: 4px;
   background-color: rgba(54, 52, 146, 0.274);
 }
 
+/* title area */
 .title {
   width: 100%;
   height: 400px;
@@ -78,6 +82,7 @@ hr {
   background-color: rgb(103, 115, 180);
 }
 
+/* bulk of content that is categorized */
 .content {
   width: 100%;
   background-color: rgb(56, 87, 143);
@@ -106,6 +111,7 @@ hr {
   background-color: darkBlue;
 }
 
+
 .category {
   border: 6px solid rgb(197, 63, 39);
   border-radius: 25px;
@@ -127,4 +133,21 @@ hr {
 
 .subcategoryContainer {
   display: none;
+}
+
+
+/* submit page */
+.submit {
+  display: none;
+  background-color: rgb(56, 87, 143);;
+  min-height: 95.5vh;
+}
+
+.submitBox {
+  background-color: rgb(103, 115, 180);
+  padding-top: 40px;
+  width: 750px;
+  min-height: 400px;
+  margin: auto;
+  text-align: center;
 }
