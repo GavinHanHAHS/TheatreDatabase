@@ -125,14 +125,36 @@ hr {
   border: 6px solid rgb(197, 63, 39);
   border-radius: 25px;
   background-color: tomato;
-  width: 300px;
+  height: 35px;
+  width: 350px;
   margin: 20px;
   margin-left: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.5s linear;
+}
+
+.addStuff {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 1000px;
+  margin-left: 350px;
 }
 
 .subcategoryContainer {
   display: none;
+}
+
+.itemCard {
+  background-color: rgb(73, 113, 160);
+  padding: 16px;
+  border: 6px solid rgb(51, 79, 112);
+  border-radius: 20px;
+  width: 250px;
+  margin-right: 12px;
 }
 
 

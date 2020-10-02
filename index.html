@@ -35,25 +35,51 @@
         </div>
 
         <div class="subcategoryContainer" id="subcategoryc1">
-          <div class="subcategory" id="subcategoryc11">
-            <p>subcategory 1</p>
+
+          <div>
+            <p class="subcategory">
+              subcategory 1
+            </p>
+            <div id="subcategoryc11" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>subcategory 2</p>
+
+          <div>
+            <p class="subcategory">
+              subcategory 2
+            </p>
+            <div id="subcategoryc12" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>subcategory 3</p>
+
+          <div>
+            <p class="subcategory">
+              subcategory 3
+            </p>
+            <div id="subcategoryc13" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>subcategory 4</p>
+
+          <div>
+            <p class="subcategory">
+              subcategory 4
+            </p>
+            <div id="subcategoryc14" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>subcategory 5</p>
+
+          <div>
+            <p class="subcategory">
+              subcategory 5
+            </p>
+            <div id="subcategoryc15" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>subcategory 6</p>
+
+          <div>
+            <p class="subcategory">
+              subcategory 6
+            </p>
+            <div id="subcategoryc16" class="addStuff"></div>
           </div>
+
         </div>
+
 
         <div class="category" data-group="c2">
           <p>
@@ -62,24 +88,30 @@
         </div>
         
         <div class="subcategoryContainer" id="subcategoryc2">
-          <div class="subcategory">
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 1
             </p>
+            <div id="subcategoryc21" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 2
             </p>
+            <div id="subcategoryc22" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 3
             </p>
+            <div id="subcategoryc23" class="addStuff"></div>
           </div>
+
         </div>
         
-
         
         <div class="category" data-group="c3">
           <p>
@@ -88,27 +120,37 @@
         </div>
 
         <div class="subcategoryContainer" id="subcategoryc3">
-          <div class="subcategory">
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 1
             </p>
+            <div id="subcategoryc31" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 2
             </p>
+            <div id="subcategoryc32" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 3
             </p>
+            <div id="subcategoryc33" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 4
             </p>
+            <div id="subcategoryc34" class="addStuff"></div>
           </div>
+
         </div>
+
 
         <div class="category" data-group="c4">
           <p>
@@ -117,20 +159,22 @@
         </div>
         
         <div class="subcategoryContainer" id="subcategoryc4">
-          <div class="subcategory">
-            <p>
+          <div>
+            <p class="subcategory">
               subcategory 1
             </p>
+            <div id="subcategoryc41" class="addStuff"></div>
           </div>
-          <div class="subcategory">
-            
-            <p>
+
+          <div>
+            <p class="subcategory">
               subcategory 2
             </p>
+            <div id="subcategoryc42" class="addStuff"></div>
           </div>
+
         </div>
         
-      
       </div>
 
       <div class="makeup" id="makeupDiv">
@@ -156,15 +200,18 @@
       <h2>Submit New Item</h2>
 
       <p style="margin: 60px 0px;">
-        Image: <button type="button">Select Image</button>
+        Image: <input type="file" accept="image/*" id="pictureInp"></button>
+        <img id="output" style="display: none;">
       </p>
-      <p>Name: <input type="text" id="nameInp"></p>
-      <p>Description: <input type="text" id="descInp"></p>
+      <p>Name: <input type="text" id="nameInp" autocomplete="off"></p>
+      <p>Description: <input type="text" id="descInp" autocomplete="off"></p>
       <p>big category: 
         <select id="bigCat">
           <option value="0"></option>
           <option value="1">category 1</option>
           <option value="2">category 2</option>
+          <option value="3">category 3</option>
+          <option value="4">category 4</option>
         </select>
       </p>
       <p>SMALL CATEGORY:
@@ -172,6 +219,8 @@
           <option value="0"></option>
           <option value="1">subcategory 1</option>
           <option value="2">subcategory 2</option>
+          <option value="3">subcategory 3</option>
+          <option value="4">subcategory 4</option>
         </select>
       </p>
       <p style="margin: 40px 0px;" id="submitButton"><button type="button">Submit</button></p>
