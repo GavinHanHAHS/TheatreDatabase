@@ -7,8 +7,13 @@ document.getElementById("submitButton").addEventListener("click", submitNewItem)
 document.getElementById("pictureInp").addEventListener("change", (e) => doThingWithFile(e.target.files));
 
 function submitNewItem() {
+  let file = document.getElementById("pictureInp").value;
+  file = "images/" + file.split("\\").pop();
+  console.log(file);
+
+
   let itemObj = {
-    img: document.getElementById("output").src,
+    img: file,
     name: document.getElementById("nameInp").value,
     description: document.getElementById("descInp").value,
     bigCategory: document.getElementById("bigCat").value,
@@ -24,7 +29,8 @@ function submitNewItem() {
   document.getElementById("subcategoryc" + itemObj.bigCategory + itemObj.smallCategory).append(pEl);
   
   //add to local storage
-  //localStorage.setItem("items", JSON.stringify(items));
+  localStorage.setItem("items", JSON.stringify(items));
+  console.log("item uploaded");
 }
 
 function doThingWithFile(fileList) {
@@ -46,7 +52,7 @@ function loadStorage() {
   if(itemsStr) {
     let items = JSON.parse(itemsStr);
     // add every item to the correct divs and stuff.
-    for(let i = 0; i < itemsStr.length; i++) {
+    for(let i = 0; i < items.length; i++) {
       let pEl = document.createElement("p");
       pEl.innerHTML = `<div class="itemCard"><img width="200px" src="${items[i].img}"></img> <p>Name: ${items[i].name} Description: ${items[i].description}</p></div>`
       console.log("subcategoryc" + items[i].bigCategory + items[i].smallCategory);
