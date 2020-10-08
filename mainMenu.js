@@ -33,6 +33,14 @@ function handleClick(event) { // do logic based on what you clicked
       } else {
         document.getElementById("subcategory" + event.target.parentElement.dataset.group).style.display = "block";
       }
+    } else if(event.target.classList.contains("subcategory")) {
+      console.log(3);
+      console.log("subcategory" + event.target.dataset.group);
+      if(document.getElementById("subcategory" + event.target.dataset.group).style.display == "flex") {
+        document.getElementById("subcategory" + event.target.dataset.group).style.display = "none";
+      } else {
+        document.getElementById("subcategory" + event.target.dataset.group).style.display = "flex";
+      } 
     }
   }
   

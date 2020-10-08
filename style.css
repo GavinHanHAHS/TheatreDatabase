@@ -8,6 +8,7 @@ body {
   scrollbar-width: none;
 }
 
+/* prevents scrollbar from displaying*/
 ::-webkit-scrollbar {
   display: none;
 }
@@ -86,6 +87,8 @@ hr {
 .content {
   width: 100%;
   background-color: rgb(56, 87, 143);
+  min-height: 430px;
+  padding-bottom: 12px;
 }
 
 .bar {
@@ -95,12 +98,10 @@ hr {
 
 .costumes {
   display: block;
-  min-height: 389px;
 }
 
 .makeup {
   display: none;
-  min-height: 389px;
 }
 
 #costumeButt {
@@ -136,7 +137,7 @@ hr {
 }
 
 .addStuff {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;

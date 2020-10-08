@@ -7,11 +7,12 @@ document.getElementById("submitButton").addEventListener("click", submitNewItem)
 document.getElementById("pictureInp").addEventListener("change", (e) => doThingWithFile(e.target.files));
 
 function submitNewItem() {
+  // get filename
   let file = document.getElementById("pictureInp").value;
   file = "images/" + file.split("\\").pop();
   console.log(file);
 
-
+  // store values of items in object
   let itemObj = {
     img: file,
     name: document.getElementById("nameInp").value,
@@ -20,6 +21,7 @@ function submitNewItem() {
     smallCategory: document.getElementById("smallCat").value
   }
 
+  //push object to array
   items.push(itemObj);
 
   // add item to correct divs
@@ -47,9 +49,9 @@ function doThingWithFile(fileList) {
   }
 }
 
-function loadStorage() {
-  let itemsStr = localStorage.getItem("items");
-  if(itemsStr) {
+function loadStorage() { // checks localstorage to see if there's values in there
+  let itemsStr = localStorage.getItem("items"); 
+  if(itemsStr) { // if storage available, load it
     let items = JSON.parse(itemsStr);
     // add every item to the correct divs and stuff.
     for(let i = 0; i < items.length; i++) {
@@ -59,7 +61,7 @@ function loadStorage() {
       document.getElementById("subcategoryc" + items[i].bigCategory + items[i].smallCategory).append(pEl);
     }
     return items;
-  } else {
+  } else { // otherwise return an empty string
     return [];
   }
 }
