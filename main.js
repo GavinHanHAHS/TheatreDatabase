@@ -30,7 +30,7 @@ function submitNewItem() {
   
   //add to local storage
   localStorage.setItem("items", JSON.stringify(items));
-  console.log("item uploaded");
+  console.log("item uploaded"); 
 }
 
 function doThingWithFile(fileList) {
